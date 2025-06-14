@@ -12,6 +12,7 @@ st.sidebar.divider()
 
 
 #응원해주세요!!
+st.image("assets/profile.jpg", caption="지호의 이미지")
 if st.button("염지호를 응원해주세요! 🙌"):
     st.write("정말 감사합니다! 🙇‍♂️")
 st.caption("아이고야 힘들다")

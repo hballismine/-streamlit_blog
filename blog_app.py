@@ -116,6 +116,7 @@ st.markdown("##### 회귀식 작성하기")
 st.latex(r"\text{wage} = \beta_0 + \beta_1 \cdot IQ_i + \beta_2 \cdot educ_i + \varepsilon")
 st.markdown("##### 두 개의 산포도 그림")
 st.markdown("- 종속변수: **wage**, 독립변수: **IQ**")
+st.write(df.head())
 fig1 = px.scatter(df, x="IQ", y="wage",
                   labels={"IQ": "지능지수 (IQ)", "wage": "임금(wage)"},
                   title="IQ와 임금 간의 관계",

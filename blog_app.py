@@ -116,7 +116,17 @@ st.markdown("##### 회귀식 작성하기")
 st.latex(r"\text{wage} = \beta_0 + \beta_1 \cdot IQ_i + \beta_2 \cdot educ_i + \varepsilon")
 st.markdown("##### 두 개의 산포도 그림")
 st.markdown("- 종속변수: **wage**, 독립변수: **IQ**")
+fig1 = px.scatter(df, x="IQ", y="wage",
+                  labels={"IQ": "지능지수 (IQ)", "wage": "임금(wage)"},
+                  title="IQ와 임금 간의 관계",
+                  color_discrete_sequence=["blue"])
+st.plotly_chart(fig1, use_container_width=True)
 st.markdown("- 종속변수: **wage**, 독립변수: **educ**")
+fig2 = px.scatter(df, x="educ", y="wage",
+                  labels={"educ": "교육수준 (교육 연수)", "wage": "임금(wage)"},
+                  title="교육수준과 임금 간의 관계",
+                  color_discrete_sequence=["green"])
+st.plotly_chart(fig2, use_container_width=True)
 st.markdown("##### R-프로그래밍으로 다중회귀분석 진행하기")
 st.code("""
 # WAGE2.csv 불러오기
